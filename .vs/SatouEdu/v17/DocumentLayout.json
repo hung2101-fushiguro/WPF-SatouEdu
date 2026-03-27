@@ -1,0 +1,103 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C164DF74-50AB-442D-9F9A-AA002D0A5780}|Services\\Services.csproj|e:\\satoru\\documents\\prn212\\satouedu\\services\\submissiondetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C164DF74-50AB-442D-9F9A-AA002D0A5780}|Services\\Services.csproj|solutionrelative:services\\submissiondetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{840822AF-96A5-4EE3-9E79-12972C8A5D46}|DataAccessLayer\\DataAccessLayer.csproj|e:\\satoru\\documents\\prn212\\satouedu\\dataaccesslayer\\submissiondetaildao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{840822AF-96A5-4EE3-9E79-12972C8A5D46}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\submissiondetaildao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C164DF74-50AB-442D-9F9A-AA002D0A5780}|Services\\Services.csproj|e:\\satoru\\documents\\prn212\\satouedu\\services\\isubmissiondetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C164DF74-50AB-442D-9F9A-AA002D0A5780}|Services\\Services.csproj|solutionrelative:services\\isubmissiondetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1186,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SubmissionDetailService.cs",
+              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\Services\\SubmissionDetailService.cs",
+              "RelativeDocumentMoniker": "Services\\SubmissionDetailService.cs",
+              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\Services\\SubmissionDetailService.cs",
+              "RelativeToolTip": "Services\\SubmissionDetailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAB+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T17:24:06.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SubmissionDetailDAO.cs",
+              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\DataAccessLayer\\SubmissionDetailDAO.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\SubmissionDetailDAO.cs",
+              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\DataAccessLayer\\SubmissionDetailDAO.cs",
+              "RelativeToolTip": "DataAccessLayer\\SubmissionDetailDAO.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwCYAAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T17:22:35.823Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ISubmissionDetailService.cs",
+              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\Services\\ISubmissionDetailService.cs",
+              "RelativeDocumentMoniker": "Services\\ISubmissionDetailService.cs",
+              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\Services\\ISubmissionDetailService.cs",
+              "RelativeToolTip": "Services\\ISubmissionDetailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T17:21:35.67Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:4:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\appsettings.json",
+              "RelativeDocumentMoniker": "WPFApp\\appsettings.json",
+              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\appsettings.json",
+              "RelativeToolTip": "WPFApp\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-27T15:54:27.418Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
