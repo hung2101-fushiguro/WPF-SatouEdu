@@ -1,0 +1,62 @@
+﻿<Window x:Class="WPFApp.Views.ManageEnrollmentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Duyệt Học Sinh" Height="450" Width="550"
+        WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow" Background="#f8f9fa" FontFamily="Segoe UI">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="0,0,0,20">
+            <TextBlock Text="Danh sách chờ duyệt" FontSize="24" FontWeight="Black" Foreground="#191c1d"/>
+            <TextBlock Text="Phê duyệt hoặc từ chối yêu cầu tham gia lớp học." FontSize="14" Foreground="#6b7280" Margin="0,5,0,0"/>
+        </StackPanel>
+
+        <Border Grid.Row="1" Background="White" CornerRadius="10" BorderBrush="#e1e3e4" BorderThickness="1" Padding="15">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <ItemsControl ItemsSource="{Binding PendingStudents}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border BorderBrush="#f3f4f5" BorderThickness="0,0,0,1" Padding="0,10">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <StackPanel Grid.Column="0" VerticalAlignment="Center">
+                                        <TextBlock Text="{Binding Student.FullName}" FontSize="15" FontWeight="Bold" Foreground="#191c1d"/>
+                                        <TextBlock Text="{Binding EnrollmentDate, StringFormat='Gửi lúc: {0:dd/MM/yyyy HH:mm}'}" FontSize="12" Foreground="#6b7280"/>
+                                    </StackPanel>
+
+                                    <Button Grid.Column="1" Command="{Binding DataContext.ApproveCommand, RelativeSource={RelativeSource AncestorType=Window}}" CommandParameter="{Binding}" Margin="0,0,10,0" Padding="15,8" Background="#e6fffa" BorderThickness="0" Cursor="Hand">
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="Button">
+                                                <Border CornerRadius="6" Background="{TemplateBinding Background}">
+                                                    <TextBlock Text="Đồng ý" Foreground="#0d9488" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+
+                                    <Button Grid.Column="2" Command="{Binding DataContext.RejectCommand, RelativeSource={RelativeSource AncestorType=Window}}" CommandParameter="{Binding}" Padding="15,8" Background="#fef2f2" BorderThickness="0" Cursor="Hand">
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="Button">
+                                                <Border CornerRadius="6" Background="{TemplateBinding Background}">
+                                                    <TextBlock Text="Từ chối" Foreground="#dc2626" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+        </Border>
+    </Grid>
+</Window>

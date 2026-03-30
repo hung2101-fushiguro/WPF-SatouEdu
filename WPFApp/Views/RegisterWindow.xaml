@@ -1,0 +1,141 @@
+﻿<Window x:Class="WPFApp.Views.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Đăng ký tài khoản" Height="700" Width="1100"
+        WindowStartupLocation="CenterScreen"
+        Background="#f8f9fa" FontFamily="Segoe UI"
+        WindowStyle="None" AllowsTransparency="True">
+
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <ScrollViewer x:Name="PART_ContentHost"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="PasswordBox">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="PasswordBox">
+                        <ScrollViewer x:Name="PART_ContentHost"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Background="#ffffff" ClipToBounds="True">
+            <Ellipse Width="400" Height="400" Fill="#bde9ff" Opacity="0.3" Margin="0,-150,-200,0" HorizontalAlignment="Right" VerticalAlignment="Top">
+                <Ellipse.Effect>
+                    <BlurEffect Radius="100"/>
+                </Ellipse.Effect>
+            </Ellipse>
+
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="420">
+                <TextBlock Text="Tạo tài khoản" FontSize="32" FontWeight="ExtraBlack" Foreground="#191c1d" HorizontalAlignment="Center" Margin="0,0,0,5"/>
+                <TextBlock Text="Đăng ký để tham gia hệ thống học tập SatouEdu." FontSize="14" FontWeight="Medium" Foreground="#5f5e5e" HorizontalAlignment="Center" Margin="0,0,0,30"/>
+
+                <Border Background="#ffffff" CornerRadius="12" Padding="25" BorderBrush="#e1e3e4" BorderThickness="1">
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="40" ShadowDepth="12" Color="Black" Opacity="0.04"/>
+                    </Border.Effect>
+                    <StackPanel>
+
+                        <TextBlock Text="Họ và tên" FontSize="13" FontWeight="SemiBold" Foreground="#3d484e" Margin="4,0,0,5"/>
+                        <Border Background="#f3f4f5" CornerRadius="8" Height="40" Margin="0,0,0,15" Padding="15,0">
+                            <TextBox Text="{Binding FullName}" FontSize="14" Foreground="#191c1d" Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center"/>
+                        </Border>
+
+                        <TextBlock Text="Email Address" FontSize="13" FontWeight="SemiBold" Foreground="#3d484e" Margin="4,0,0,5"/>
+                        <Border Background="#f3f4f5" CornerRadius="8" Height="40" Margin="0,0,0,15" Padding="15,0">
+                            <TextBox Text="{Binding Email}" FontSize="14" Foreground="#191c1d" Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center"/>
+                        </Border>
+
+                        <TextBlock Text="Mật khẩu" FontSize="13" FontWeight="SemiBold" Foreground="#3d484e" Margin="4,0,0,5"/>
+                        <Border Background="#f3f4f5" CornerRadius="8" Height="40" Margin="0,0,0,15" Padding="15,0">
+                            <PasswordBox x:Name="txtPass" FontSize="14" Foreground="#191c1d" Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center"/>
+                        </Border>
+
+                        <Grid Margin="0,0,0,15">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="10"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Column="0">
+                                <TextBlock Text="Ngày sinh" FontSize="13" FontWeight="SemiBold" Foreground="#3d484e" Margin="4,0,0,5"/>
+                                <DatePicker SelectedDate="{Binding DateOfBirth}" Height="40" FontSize="14"/>
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="2">
+                                <TextBlock Text="Vai trò" FontSize="13" FontWeight="SemiBold" Foreground="#3d484e" Margin="4,0,0,5"/>
+                                <ComboBox SelectedIndex="{Binding SelectedRoleIndex}" Height="40" FontSize="14" VerticalContentAlignment="Center" Padding="10,0">
+                                    <ComboBoxItem Content="Học sinh"/>
+                                    <ComboBoxItem Content="Giáo viên"/>
+                                </ComboBox>
+                            </StackPanel>
+                        </Grid>
+
+                        <TextBlock Text="Lớp hành chính (Chỉ dành cho học sinh)" FontSize="13" FontWeight="SemiBold" Foreground="#3d484e" Margin="4,0,0,5"/>
+                        <Border Background="#f3f4f5" CornerRadius="8" Height="40" Margin="0,0,0,25" Padding="15,0">
+                            <TextBox Text="{Binding ClassName}" FontSize="14" Foreground="#191c1d" Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center" ToolTip="Nhập lớp của bạn (VD: 10A1)"/>
+                        </Border>
+
+                        <Button Command="{Binding RegisterCommand}" CommandParameter="{Binding ElementName=txtPass}" Height="45" Cursor="Hand" BorderThickness="0">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border CornerRadius="8">
+                                        <Border.Background>
+                                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                                <GradientStop Color="#006683" Offset="0"/>
+                                                <GradientStop Color="#33ccff" Offset="1"/>
+                                            </LinearGradientBrush>
+                                        </Border.Background>
+                                        <TextBlock Text="Đăng ký ngay" FontSize="15" FontWeight="Bold" Foreground="#ffffff" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+
+                        <Button Command="{Binding BackToLoginCommand}" Height="40" Margin="0,10,0,0" Cursor="Hand" Background="Transparent" BorderThickness="0">
+                            <TextBlock Text="Đã có tài khoản? Đăng nhập" FontSize="13" FontWeight="Bold" Foreground="#006683" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Button>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#004d64" Offset="0"/>
+                    <GradientStop Color="#65d3ff" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Text="SATOU EDU" FontSize="50" FontWeight="Black" Foreground="White" HorizontalAlignment="Center"/>
+                <TextBlock Text="Nền tảng quản lý học tập thông minh" FontSize="18" Foreground="#e1e3e4" Margin="0,10,0,0"/>
+            </StackPanel>
+
+            <Border>
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
+                        <GradientStop Color="#ffffff" Offset="0"/>
+                        <GradientStop Color="#80ffffff" Offset="0.3"/>
+                        <GradientStop Color="#00ffffff" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

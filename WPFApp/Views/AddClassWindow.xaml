@@ -1,0 +1,77 @@
+﻿<Window x:Class="WPFApp.Views.AddClassWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Tạo lớp học mới" Height="550" Width="450"
+        WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent" FontFamily="Segoe UI">
+
+    <Border Background="#ffffff" CornerRadius="20" BorderBrush="#e1e3e4" BorderThickness="1" Margin="10">
+        <Border.Effect>
+            <DropShadowEffect BlurRadius="20" ShadowDepth="5" Color="Black" Opacity="0.1"/>
+        </Border.Effect>
+        <Grid Margin="25">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Margin="0,0,0,20">
+                <TextBlock Text="Tạo Lớp Học Mới" FontSize="24" FontWeight="Black" Foreground="#191c1d"/>
+                <TextBlock Text="Điền thông tin để mở lớp học của bạn." FontSize="13" Foreground="#6b7280" Margin="0,5,0,0"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1">
+                <TextBlock Text="Tên lớp học (*)" FontSize="12" FontWeight="Bold" Foreground="#3d484e" Margin="0,0,0,5"/>
+                <Border Background="#f3f4f5" CornerRadius="8" Height="40" Margin="0,0,0,15" Padding="15,0">
+                    <TextBox Text="{Binding ClassName}" FontSize="14" Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center" ToolTip="VD: Toán Đại Số 10A1"/>
+                </Border>
+
+                <TextBlock Text="Mã lớp mục tiêu (Tùy chọn)" FontSize="12" FontWeight="Bold" Foreground="#3d484e" Margin="0,0,0,5"/>
+                <Border Background="#f3f4f5" CornerRadius="8" Height="40" Margin="0,0,0,15" Padding="15,0">
+                    <TextBox Text="{Binding TargetClassName}" FontSize="14" Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center" ToolTip="VD: 10A1 (Chỉ học sinh lớp này mới thấy)"/>
+                </Border>
+
+                <TextBlock Text="Môn học (*)" FontSize="12" FontWeight="Bold" Foreground="#3d484e" Margin="0,0,0,5"/>
+                <Border Background="#f3f4f5" CornerRadius="8" Height="40" Margin="0,0,0,15" Padding="15,0">
+                    <ComboBox ItemsSource="{Binding Subjects}" 
+                              SelectedItem="{Binding SelectedSubject}" 
+                              DisplayMemberPath="SubjectName" 
+                              FontSize="14" Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center"/>
+                </Border>
+
+                <TextBlock Text="Mô tả khóa học" FontSize="12" FontWeight="Bold" Foreground="#3d484e" Margin="0,0,0,5"/>
+                <Border Background="#f3f4f5" CornerRadius="8" Height="100" Margin="0,0,0,15" Padding="15,10">
+                    <TextBox Text="{Binding Description}" TextWrapping="Wrap" AcceptsReturn="True" FontSize="14" Background="Transparent" BorderThickness="0"/>
+                </Border>
+            </StackPanel>
+
+            <Grid Grid.Row="2" Margin="0,10,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0" Command="{Binding CancelCommand}" Height="45" Background="#f3f4f5" BorderThickness="0" Cursor="Hand">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="8" Background="{TemplateBinding Background}">
+                                <TextBlock Text="Hủy bỏ" FontWeight="Bold" Foreground="#6b7280" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+                <Button Grid.Column="2" Command="{Binding SaveCommand}" Height="45" Background="#66FF33" BorderThickness="0" Cursor="Hand">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="8" Background="{TemplateBinding Background}">
+                                <TextBlock Text="Lưu Lớp Học" FontWeight="Bold" Foreground="#042100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

@@ -1,0 +1,74 @@
+﻿<UserControl x:Class="WPFApp.Views.StudentDashboardView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="Transparent" FontFamily="Segoe UI">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+        <Grid Margin="10,0,10,20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Margin="0,0,0,30" VerticalAlignment="Bottom">
+                <TextBlock Text="Khám phá Lớp học" FontSize="36" FontWeight="ExtraBlack" Foreground="#191c1d" Margin="0,0,0,10"/>
+                <TextBlock Text="Tìm kiếm và đăng ký tham gia các lớp học phù hợp với bạn." FontSize="16" Foreground="#6b7280"/>
+            </StackPanel>
+
+            <ItemsControl Grid.Row="1" ItemsSource="{Binding AvailableClasses}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Columns="3" VerticalAlignment="Top"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Background="#ffffff" CornerRadius="25" Margin="0,0,20,20" Padding="20" BorderBrush="#f3f4f5" BorderThickness="1">
+                            <Border.Effect>
+                                <DropShadowEffect BlurRadius="30" ShadowDepth="8" Color="Black" Opacity="0.04"/>
+                            </Border.Effect>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="140"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <Border Grid.Row="0" CornerRadius="15" Margin="0,0,0,20">
+                                    <Border.Background>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                            <GradientStop Color="#004d64" Offset="0"/>
+                                            <GradientStop Color="#33CCFF" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                </Border>
+
+                                <TextBlock Grid.Row="1" Text="{Binding ClassName}" FontSize="18" FontWeight="Bold" Foreground="#191c1d" Margin="0,0,0,5" TextTrimming="CharacterEllipsis"/>
+                                <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,30,0,15">
+                                    <TextBlock Text="&#xE77B;" FontFamily="Segoe MDL2 Assets" FontSize="14" Foreground="#9ca3af" Margin="0,0,5,0" VerticalAlignment="Center"/>
+                                    <TextBlock Text="{Binding TeacherName}" FontSize="13" FontWeight="SemiBold" Foreground="#6b7280" VerticalAlignment="Center"/>
+                                </StackPanel>
+
+                                <TextBlock Grid.Row="2" Text="{Binding Description}" FontSize="13" Foreground="#6b7280" TextWrapping="Wrap" Margin="0,0,0,20" MinHeight="40"/>
+
+                                <Button Grid.Row="3" Command="{Binding DataContext.JoinClassCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}" CommandParameter="{Binding ClassId}" Height="40" Background="{Binding ButtonBgColor}" BorderThickness="0" Cursor="Hand">
+                                    <Button.Template>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border CornerRadius="10" Background="{TemplateBinding Background}">
+                                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                    <TextBlock Text="{Binding ButtonIcon}" FontFamily="Segoe MDL2 Assets" Foreground="{Binding ButtonTextColor}" FontSize="14" Margin="0,0,8,0" FontWeight="Bold"/>
+                                                    <TextBlock Text="{Binding ButtonText}" Foreground="{Binding ButtonTextColor}" FontSize="13" FontWeight="Bold"/>
+                                                </StackPanel>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Grid>
+    </ScrollViewer>
+</UserControl>

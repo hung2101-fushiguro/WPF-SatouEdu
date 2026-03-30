@@ -1,4 +1,5 @@
 ﻿using BusinessObjects;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +31,10 @@ namespace DataAccessLayer
         {
             using var db = new SatouEduDbContext();
             // Status = 1: Chờ duyệt
-            return db.ClassEnrollments.Where(e => e.ClassId == classId && e.Status == 1).ToList();
+            return db.ClassEnrollments
+                     .Include(e => e.Student) 
+                     .Where(e => e.ClassId == classId && e.Status == 1)
+                     .ToList();
         }
 
         // Học sinh gửi yêu cầu tham gia lớp

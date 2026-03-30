@@ -1,4 +1,5 @@
 ﻿using BusinessObjects;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,9 +34,12 @@ namespace DataAccessLayer
             try
             {
                 using var db = new SatouEduDbContext();
-                listClasses = db.Classes.ToList();
+                listClasses = db.Classes.Include(c => c.ClassEnrollments).ToList();
             }
-            catch (Exception e) { }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
             return listClasses;
         }
 

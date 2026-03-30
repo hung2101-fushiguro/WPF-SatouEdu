@@ -9,6 +9,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using WPFApp.Commands;
+using WPFApp.Views;
 
 namespace WPFApp.ViewModels
 {
@@ -23,11 +24,13 @@ namespace WPFApp.ViewModels
         }
         public ICommand LoginCommand { get; }
         public ICommand CloseCommand { get; }
+        public ICommand OpenRegisterCommand { get; }
         public LoginViewModel()
         {
             _userService = new UserService();
             LoginCommand = new RelayCommand<PasswordBox>(ExecuteLogin);
             CloseCommand = new RelayCommand<object>(ExecuteClose);
+            OpenRegisterCommand = new RelayCommand<object>(ExecuteOpenRegister);
         }
         private void ExecuteLogin(PasswordBox passwordBox)
         {
@@ -45,7 +48,18 @@ namespace WPFApp.ViewModels
                     MessageBox.Show("Tài khoản của bạn đã bị khóa! Vui lòng liên hệ Admin.", "Lỗi truy cập", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
-                MessageBox.Show($"Đăng nhập thành công!\nXin chào: {account.FullName}\nVai trò: {(account.Role == 0 ? "Admin" : account.Role == 1 ? "Giáo viên" : "Học sinh")}", "Thành công", MessageBoxButton.OK, MessageBoxImage.Information);
+                MainWindow mainWindow = new MainWindow(account);
+                mainWindow.Show();
+
+                // Đóng LoginWindow hiện tại
+                foreach (Window window in Application.Current.Windows)
+                {
+                    if (window is LoginWindow)
+                    {
+                        window.Close();
+                        break;
+                    }
+                }
             }
             else 
             {
@@ -55,6 +69,19 @@ namespace WPFApp.ViewModels
         private void ExecuteClose(object parameter)
         {
             Application.Current.Shutdown();
+        }
+        private void ExecuteOpenRegister(object parameter) 
+        {
+            RegisterWindow registerWindow = new RegisterWindow();
+            registerWindow.Show();
+            foreach(Window window in Application.Current.Windows)
+            {
+                if (window is LoginWindow) 
+                {
+                    window.Close();
+                    break;
+                }
+            }
         }
     }
 }
