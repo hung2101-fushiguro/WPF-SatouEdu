@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\views\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\views\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\commands\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\commands\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C164DF74-50AB-442D-9F9A-AA002D0A5780}|Services\\Services.csproj|e:\\satoru\\documents\\prn212\\satouedu\\services\\submissiondetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C164DF74-50AB-442D-9F9A-AA002D0A5780}|Services\\Services.csproj|solutionrelative:services\\submissiondetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C164DF74-50AB-442D-9F9A-AA002D0A5780}|Services\\Services.csproj|e:\\satoru\\documents\\prn212\\satouedu\\services\\isubmissiondetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C164DF74-50AB-442D-9F9A-AA002D0A5780}|Services\\Services.csproj|solutionrelative:services\\isubmissiondetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,24 +56,91 @@
         },
         {
           "DockedWidth": 1186,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.xaml",
+              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\App.xaml",
+              "RelativeDocumentMoniker": "WPFApp\\App.xaml",
+              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\App.xaml",
+              "RelativeToolTip": "WPFApp\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-30T08:43:40.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "WPFApp\\ViewModels\\LoginViewModel.cs",
+              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\ViewModels\\LoginViewModel.cs",
+              "RelativeToolTip": "WPFApp\\ViewModels\\LoginViewModel.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowDkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T08:13:37.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ViewModelBase.cs",
+              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\ViewModels\\ViewModelBase.cs",
+              "RelativeDocumentMoniker": "WPFApp\\ViewModels\\ViewModelBase.cs",
+              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\ViewModels\\ViewModelBase.cs",
+              "RelativeToolTip": "WPFApp\\ViewModels\\ViewModelBase.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T08:09:23.622Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Commands\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "WPFApp\\Commands\\RelayCommand.cs",
+              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Commands\\RelayCommand.cs",
+              "RelativeToolTip": "WPFApp\\Commands\\RelayCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T07:47:29.74Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "LoginWindow.xaml",
+              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Views\\LoginWindow.xaml",
+              "RelativeDocumentMoniker": "WPFApp\\Views\\LoginWindow.xaml",
+              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Views\\LoginWindow.xaml",
+              "RelativeToolTip": "WPFApp\\Views\\LoginWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-30T07:27:14.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "SubmissionDetailService.cs",
               "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\Services\\SubmissionDetailService.cs",
               "RelativeDocumentMoniker": "Services\\SubmissionDetailService.cs",
               "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\Services\\SubmissionDetailService.cs",
               "RelativeToolTip": "Services\\SubmissionDetailService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAB+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-27T17:24:06.832Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "SubmissionDetailDAO.cs",
               "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\DataAccessLayer\\SubmissionDetailDAO.cs",
               "RelativeDocumentMoniker": "DataAccessLayer\\SubmissionDetailDAO.cs",
@@ -61,12 +148,11 @@
               "RelativeToolTip": "DataAccessLayer\\SubmissionDetailDAO.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAYwCYAAABdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T17:22:35.823Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T17:22:35.823Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "ISubmissionDetailService.cs",
               "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\Services\\ISubmissionDetailService.cs",
               "RelativeDocumentMoniker": "Services\\ISubmissionDetailService.cs",
@@ -74,20 +160,11 @@
               "RelativeToolTip": "Services\\ISubmissionDetailService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T17:21:35.67Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:4:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+              "WhenOpened": "2026-03-27T17:21:35.67Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "appsettings.json",
               "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\appsettings.json",
               "RelativeDocumentMoniker": "WPFApp\\appsettings.json",
