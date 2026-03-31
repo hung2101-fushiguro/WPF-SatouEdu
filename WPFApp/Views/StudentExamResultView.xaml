@@ -1,0 +1,120 @@
+﻿<UserControl x:Class="WPFApp.Views.StudentExamResultView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="#f8f9fa" FontFamily="Segoe UI">
+
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVis"/>
+    </UserControl.Resources>
+
+    <Grid Margin="30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Background="White" CornerRadius="15" Padding="30" Margin="0,0,0,20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="15" ShadowDepth="2" Color="Black" Opacity="0.03"/>
+            </Border.Effect>
+            <Grid>
+                <Button Command="{Binding CloseCommand}" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Transparent" BorderThickness="0" Cursor="Hand" Foreground="#6b7280" FontWeight="Bold">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="&#xE72B;" FontFamily="Segoe MDL2 Assets" FontSize="16" Margin="0,0,8,0" VerticalAlignment="Center"/>
+                        <TextBlock Text="Quay lại Lớp học" FontSize="14" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0">
+                    <TextBlock Text="{Binding ExamInfo.ExamName}" FontSize="24" FontWeight="Black" Foreground="#191c1d" HorizontalAlignment="Center" Margin="0,0,0,15"/>
+
+                    <StackPanel Visibility="{Binding IsScoreVisible, Converter={StaticResource BoolToVis}}" Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Border Background="#f0fdf4" BorderBrush="#bbf7d0" BorderThickness="1" CornerRadius="10" Padding="20,10" Margin="0,0,15,0">
+                            <StackPanel>
+                                <TextBlock Text="SỐ ĐIỂM" FontSize="12" FontWeight="Bold" Foreground="#16a34a" HorizontalAlignment="Center"/>
+                                <TextBlock Text="{Binding Submission.Score, StringFormat='{}{0:0.0} / 10'}" FontSize="32" FontWeight="Black" Foreground="#15803d" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
+
+                        <Border Background="#f3f4f5" CornerRadius="10" Padding="20,10">
+                            <StackPanel>
+                                <TextBlock Text="SỐ CÂU ĐÚNG" FontSize="12" FontWeight="Bold" Foreground="#6b7280" HorizontalAlignment="Center"/>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <TextBlock Text="{Binding Submission.TotalCorrect}" FontSize="32" FontWeight="Black" Foreground="#191c1d"/>
+                                    <TextBlock Text="{Binding TotalQuestions, StringFormat=' / {0}'}" FontSize="20" FontWeight="Bold" Foreground="#6b7280" VerticalAlignment="Bottom" Margin="0,0,0,3"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+
+                    <Border Visibility="{Binding IsScoreHidden, Converter={StaticResource BoolToVis}}" Background="#fffbeb" BorderBrush="#fde68a" BorderThickness="1" CornerRadius="10" Padding="20,15">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="&#xE7BA;" FontFamily="Segoe MDL2 Assets" Foreground="#d97706" FontSize="20" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                            <TextBlock Text="Điểm số và Chi tiết bài làm của bài thi này đã được giáo viên ẩn đi." Foreground="#b45309" FontWeight="Bold" FontSize="14" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <ScrollViewer Grid.Row="1" Visibility="{Binding IsScoreVisible, Converter={StaticResource BoolToVis}}" VerticalScrollBarVisibility="Auto">
+            <ItemsControl ItemsSource="{Binding QuestionResults}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Background="White" BorderBrush="#e1e3e4" BorderThickness="1" CornerRadius="12" Padding="25" Margin="0,0,0,15">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,15">
+                                    <Border Background="#e0f2fe" CornerRadius="5" Padding="10,3" Margin="0,0,10,0">
+                                        <TextBlock Text="{Binding OrderIndex, StringFormat='Câu {0}'}" Foreground="#006683" FontWeight="Bold"/>
+                                    </Border>
+                                    <TextBlock Text="&#xE73E;" FontFamily="Segoe MDL2 Assets" Foreground="#22c55e" FontSize="18" VerticalAlignment="Center" Visibility="{Binding IsCorrect, Converter={StaticResource BoolToVis}}"/>
+                                    <TextBlock Text="&#xE711;" FontFamily="Segoe MDL2 Assets" Foreground="#ef4444" FontSize="18" VerticalAlignment="Center" Visibility="{Binding IsCorrect, Converter={StaticResource BoolToVis}, ConverterParameter=Inverse}"/>
+                                </StackPanel>
+
+                                <TextBlock Text="{Binding Content}" FontSize="18" FontWeight="SemiBold" TextWrapping="Wrap" Margin="0,0,0,20"/>
+
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="15"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="15"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Border Grid.Row="0" Grid.Column="0" Background="{Binding BgA}" BorderBrush="{Binding BorderA}" BorderThickness="1" CornerRadius="8" Padding="15">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="A. " FontWeight="Bold" Margin="0,0,5,0"/>
+                                            <TextBlock Text="{Binding OptionA}" TextWrapping="Wrap"/>
+                                        </StackPanel>
+                                    </Border>
+                                    <Border Grid.Row="0" Grid.Column="2" Background="{Binding BgB}" BorderBrush="{Binding BorderB}" BorderThickness="1" CornerRadius="8" Padding="15">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="B. " FontWeight="Bold" Margin="0,0,5,0"/>
+                                            <TextBlock Text="{Binding OptionB}" TextWrapping="Wrap"/>
+                                        </StackPanel>
+                                    </Border>
+                                    <Border Grid.Row="2" Grid.Column="0" Background="{Binding BgC}" BorderBrush="{Binding BorderC}" BorderThickness="1" CornerRadius="8" Padding="15">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="C. " FontWeight="Bold" Margin="0,0,5,0"/>
+                                            <TextBlock Text="{Binding OptionC}" TextWrapping="Wrap"/>
+                                        </StackPanel>
+                                    </Border>
+                                    <Border Grid.Row="2" Grid.Column="2" Background="{Binding BgD}" BorderBrush="{Binding BorderD}" BorderThickness="1" CornerRadius="8" Padding="15">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="D. " FontWeight="Bold" Margin="0,0,5,0"/>
+                                            <TextBlock Text="{Binding OptionD}" TextWrapping="Wrap"/>
+                                        </StackPanel>
+                                    </Border>
+                                </Grid>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

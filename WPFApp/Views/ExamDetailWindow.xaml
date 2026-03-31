@@ -1,0 +1,127 @@
+﻿<Window x:Class="WPFApp.Views.ExamDetailWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Phân tích kết quả" Height="700" Width="1100"
+        WindowStartupLocation="CenterScreen" Background="#f3f4f5" FontFamily="Segoe UI">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header: SatouEdu + Thông tin bài kiểm tra -->
+        <Grid Grid.Row="0" Margin="0,0,0,20">
+            <!-- Cột trái: SatouEdu + Tên bài kiểm tra -->
+            <StackPanel HorizontalAlignment="Left">
+                <!-- SatouEdu với màu #00FFFF -->
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                    <TextBlock Text="&#xE701;" FontFamily="Segoe MDL2 Assets" FontSize="22" Foreground="#00FFFF" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                    <TextBlock Text="SatouEdu" FontSize="22" FontWeight="Black" Foreground="#00FFFF"/>
+                </StackPanel>
+
+                <!-- Tên bài kiểm tra -->
+                <TextBlock Text="{Binding ExamInfo.ExamName}" FontSize="28" FontWeight="Black" Foreground="#191c1d" Margin="0,5,0,0" Height="2"/>
+
+                <!-- Thông tin đã nộp / tổng số học sinh -->
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                    <TextBlock Text="Đã nộp: " FontSize="14" Foreground="#6b7280"/>
+                    <TextBlock Text="{Binding TotalSubmitted}" FontSize="14" FontWeight="Bold" Foreground="#0284c7"/>
+                    <TextBlock Text=" / " FontSize="14" Foreground="#6b7280"/>
+                    <TextBlock Text="{Binding TotalStudents}" FontSize="14" FontWeight="Bold" Foreground="#0284c7"/>
+                    <TextBlock Text=" học sinh" FontSize="14" Foreground="#6b7280"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+
+        <!-- Nội dung chính: Danh sách học sinh + Thống kê lỗi sai -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="6*"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Cột trái: Danh sách học sinh -->
+            <Border Grid.Column="0" Background="White" CornerRadius="12" Padding="20">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Text="Danh sách Học sinh" FontSize="18" FontWeight="Bold" Margin="0,0,0,15"/>
+
+                    <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                        <ItemsControl ItemsSource="{Binding StudentStatuses}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border BorderBrush="#f3f4f5" BorderThickness="0,0,0,1" Padding="0,12,0,12">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="100"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Grid.Column="0" Text="{Binding StudentName}" FontSize="15" FontWeight="SemiBold" VerticalAlignment="Center"/>
+
+                                            <Border Grid.Column="1" Background="{Binding StatusColor}" CornerRadius="6" Padding="10,4" Margin="0,0,15,0" VerticalAlignment="Center">
+                                                <TextBlock Text="{Binding StatusText}" FontSize="12" FontWeight="Bold" Foreground="White"/>
+                                            </Border>
+
+                                            <TextBlock Grid.Column="2" Text="{Binding ScoreText}" Foreground="{Binding ScoreColor}" FontSize="15" FontWeight="Black" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                                        </Grid>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </ScrollViewer>
+                </Grid>
+            </Border>
+
+            <!-- Khoảng cách giữa 2 cột -->
+            <GridSplitter Grid.Column="1" Width="4" HorizontalAlignment="Stretch" Background="#e5e7eb" ResizeBehavior="BasedOnAlignment"/>
+
+            <!-- Cột phải: Thống kê lỗi sai -->
+            <Border Grid.Column="2" Background="White" CornerRadius="12" Padding="20">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0" Margin="0,0,0,15">
+                        <TextBlock Text="Thống kê Lỗi sai" FontSize="18" FontWeight="Bold" Foreground="#191c1d"/>
+                        <TextBlock Text="Top các câu hỏi học sinh sai nhiều nhất" FontSize="12" Foreground="#6b7280" Margin="0,2,0,0"/>
+                    </StackPanel>
+
+                    <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                        <ItemsControl ItemsSource="{Binding HardestQuestions}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Background="#fef2f2" BorderBrush="#fca5a5" BorderThickness="1" CornerRadius="8" Padding="15" Margin="0,0,0,10">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+
+                                            <TextBlock Grid.Row="0" Text="{Binding QuestionContent}" TextWrapping="Wrap" FontSize="14" FontWeight="Medium" Foreground="#7f1d1d" Margin="0,0,0,8"/>
+
+                                            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                                                <TextBlock Text="&#xE711;" FontFamily="Segoe MDL2 Assets" Foreground="#dc2626" FontSize="12" Margin="0,0,5,0" VerticalAlignment="Center"/>
+                                                <TextBlock Text="{Binding WrongCount}" FontWeight="Bold" Foreground="#dc2626" FontSize="13" VerticalAlignment="Center"/>
+                                                <TextBlock Text=" học sinh trả lời sai" Foreground="#dc2626" FontSize="12" VerticalAlignment="Center" Margin="3,0,0,0"/>
+                                            </StackPanel>
+                                        </Grid>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </ScrollViewer>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

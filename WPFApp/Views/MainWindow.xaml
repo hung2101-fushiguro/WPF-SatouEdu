@@ -14,7 +14,12 @@
         <DataTemplate DataType="{x:Type viewmodels:StudentDashboardViewModel}">
             <views:StudentDashboardView/>
         </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewmodels:QuestionBankViewModel}">
+            <views:QuestionBankView/>
+        </DataTemplate>
     </Window.Resources>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="64"/>
@@ -24,18 +29,37 @@
             <ColumnDefinition Width="260"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
+
+        <!-- Header Bar -->
         <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#ffffff" BorderBrush="#e1e3e4" BorderThickness="0,0,0,1" Panel.ZIndex="10">
             <Border.Effect>
                 <DropShadowEffect BlurRadius="10" ShadowDepth="1" Color="Black" Opacity="0.05"/>
             </Border.Effect>
             <Grid Margin="20,0,30,0">
+
+                <!-- Khu vực bên trái: Logo + Nút Back/Forward -->
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <!-- Logo SatouEdu -->
                     <Border Width="40" Height="40" CornerRadius="10" Background="#006683" Margin="0,0,15,0">
                         <TextBlock Text="&#xE82D;" FontFamily="Segoe MDL2 Assets" FontSize="20" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Border>
                     <TextBlock Text="SatouEdu LMS" FontSize="22" FontWeight="Black" Foreground="#191c1d" VerticalAlignment="Center"/>
+
+                    <!-- Nút Back và Forward - Đã thêm vào đây -->
+                    <StackPanel Orientation="Horizontal" Margin="30,0,0,0" VerticalAlignment="Center">
+                        <Button Command="{Binding GoBackCommand}" Width="35" Height="35" Background="Transparent" BorderThickness="0" Margin="0,0,5,0" Cursor="Hand" ToolTip="Quay lại">
+                            <TextBlock Text="&#xE72B;" FontFamily="Segoe MDL2 Assets" FontSize="16" Foreground="#191c1d" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Button>
+
+                        <Button Command="{Binding GoForwardCommand}" Width="35" Height="35" Background="Transparent" BorderThickness="0" Cursor="Hand" ToolTip="Tiến lên">
+                            <TextBlock Text="&#xE72A;" FontFamily="Segoe MDL2 Assets" FontSize="16" Foreground="#191c1d" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Button>
+                    </StackPanel>
                 </StackPanel>
+
+                <!-- Khu vực bên phải: Tìm kiếm + Thông tin user + Thoát -->
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <!-- Ô tìm kiếm -->
                     <Border Background="#f3f4f5" CornerRadius="20" Height="40" Width="250" Margin="0,0,30,0" Padding="15,0,15,0">
                         <Grid>
                             <Grid.ColumnDefinitions>
@@ -46,6 +70,8 @@
                             <TextBox Grid.Column="1" Text="Tìm kiếm..." Foreground="#6b7280" Background="Transparent" BorderThickness="0" VerticalContentAlignment="Center" FontSize="13"/>
                         </Grid>
                     </Border>
+
+                    <!-- Thông tin người dùng -->
                     <StackPanel Orientation="Horizontal" Cursor="Hand">
                         <StackPanel VerticalAlignment="Center" Margin="0,0,15,0">
                             <TextBlock Text="{Binding CurrentUser.FullName}" FontSize="14" FontWeight="Bold" Foreground="#191c1d" HorizontalAlignment="Right"/>
@@ -55,12 +81,16 @@
                             <TextBlock Text="&#xE77B;" FontFamily="Segoe MDL2 Assets" FontSize="20" Foreground="#4b5563" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </StackPanel>
+
+                    <!-- Nút thoát -->
                     <Button Command="{Binding ExitCommand}" Background="Transparent" BorderThickness="0" Margin="20,0,0,0" Cursor="Hand" ToolTip="Thoát hệ thống">
                         <TextBlock Text="&#xE711;" FontFamily="Segoe MDL2 Assets" FontSize="16" Foreground="#ef4444" FontWeight="Bold"/>
                     </Button>
                 </StackPanel>
             </Grid>
         </Border>
+
+        <!-- Sidebar Menu -->
         <Border Grid.Row="1" Grid.Column="0" Background="#f3f4f5" Padding="20">
             <Grid>
                 <Grid.RowDefinitions>
@@ -68,54 +98,61 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
+
                 <StackPanel Grid.Row="0">
                     <TextBlock Text="MENU" FontSize="10" FontWeight="Bold" Foreground="#9ca3af" Margin="15,0,0,15"/>
 
-                    <Button Height="45" Background="#ffffff" BorderThickness="0" Margin="0,0,0,5" Cursor="Hand">
+                    
+
+                    <Button Command="{Binding NavDashboardCommand}" Visibility="{Binding TeacherMenuVisibility}" Height="45" Background="Transparent" BorderThickness="0" Margin="0,0,0,5" Cursor="Hand">
                         <Button.Template>
                             <ControlTemplate TargetType="Button">
-                                <Border CornerRadius="10" Background="{TemplateBinding Background}">
-                                    <Border.Effect>
-                                        <DropShadowEffect BlurRadius="8" ShadowDepth="2" Color="Black" Opacity="0.04"/>
-                                    </Border.Effect>
+                                <Border x:Name="borderBg" CornerRadius="10" Background="Transparent">
                                     <Grid>
-                                        <Border Width="4" Height="20" Background="#33ccff" HorizontalAlignment="Left" CornerRadius="0,4,4,0"/>
+                                        <Border x:Name="activeIndicator" Width="4" Height="20" Background="#33ccff" HorizontalAlignment="Left" CornerRadius="0,4,4,0" Visibility="Hidden"/>
                                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="15,0,0,0">
-                                            <TextBlock Text="&#xE909;" FontFamily="Segoe MDL2 Assets" FontSize="18" Foreground="#33ccff" Margin="0,0,15,0"/>
-                                            <TextBlock Text="Bảng điều khiển" FontSize="14" FontWeight="SemiBold" Foreground="#191c1d"/>
+                                            <TextBlock x:Name="iconText" Text="&#xE909;" FontFamily="Segoe MDL2 Assets" FontSize="18" Foreground="#6b7280" Margin="0,0,15,0"/>
+                                            <TextBlock x:Name="menuText" Text="Bảng điều khiển" FontSize="14" FontWeight="Medium" Foreground="#4b5563"/>
                                         </StackPanel>
                                     </Grid>
                                 </Border>
+                                <ControlTemplate.Triggers>
+                                    <DataTrigger Binding="{Binding IsDashboardActive}" Value="True">
+                                        <Setter TargetName="borderBg" Property="Background" Value="#e0f2fe"/>
+                                        <Setter TargetName="activeIndicator" Property="Visibility" Value="Visible"/>
+                                        <Setter TargetName="iconText" Property="Foreground" Value="#0284c7"/>
+                                        <Setter TargetName="menuText" Property="Foreground" Value="#0284c7"/>
+                                        <Setter TargetName="menuText" Property="FontWeight" Value="Bold"/>
+                                    </DataTrigger>
+                                </ControlTemplate.Triggers>
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
 
-                    <Button Visibility="{Binding TeacherMenuVisibility}" Height="45" Background="Transparent" BorderThickness="0" Margin="0,0,0,5" Cursor="Hand">
+                    <Button Command="{Binding NavQuestionBankCommand}" Visibility="{Binding TeacherMenuVisibility}" Height="45" Background="Transparent" BorderThickness="0" Margin="0,0,0,5" Cursor="Hand">
                         <Button.Template>
                             <ControlTemplate TargetType="Button">
-                                <Border CornerRadius="10" Background="{TemplateBinding Background}">
-                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="15,0,0,0">
-                                        <TextBlock Text="&#xE716;" FontFamily="Segoe MDL2 Assets" FontSize="18" Foreground="#6b7280" Margin="0,0,15,0"/>
-                                        <TextBlock Text="Quản lý Lớp học" FontSize="14" FontWeight="Medium" Foreground="#4b5563"/>
-                                    </StackPanel>
+                                <Border x:Name="borderBg" CornerRadius="10" Background="Transparent">
+                                    <Grid>
+                                        <Border x:Name="activeIndicator" Width="4" Height="20" Background="#33ccff" HorizontalAlignment="Left" CornerRadius="0,4,4,0" Visibility="Hidden"/>
+                                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="15,0,0,0">
+                                            <TextBlock x:Name="iconText" Text="&#xE8F1;" FontFamily="Segoe MDL2 Assets" FontSize="18" Foreground="#6b7280" Margin="0,0,15,0"/>
+                                            <TextBlock x:Name="menuText" Text="Ngân hàng Câu hỏi" FontSize="14" FontWeight="Medium" Foreground="#4b5563"/>
+                                        </StackPanel>
+                                    </Grid>
                                 </Border>
+                                <ControlTemplate.Triggers>
+                                    <DataTrigger Binding="{Binding IsQuestionBankActive}" Value="True">
+                                        <Setter TargetName="borderBg" Property="Background" Value="#e0f2fe"/>
+                                        <Setter TargetName="activeIndicator" Property="Visibility" Value="Visible"/>
+                                        <Setter TargetName="iconText" Property="Foreground" Value="#0284c7"/>
+                                        <Setter TargetName="menuText" Property="Foreground" Value="#0284c7"/>
+                                        <Setter TargetName="menuText" Property="FontWeight" Value="Bold"/>
+                                    </DataTrigger>
+                                </ControlTemplate.Triggers>
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
-
-                    <Button Visibility="{Binding TeacherMenuVisibility}" Height="45" Background="Transparent" BorderThickness="0" Margin="0,0,0,5" Cursor="Hand">
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border CornerRadius="10" Background="{TemplateBinding Background}">
-                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="15,0,0,0">
-                                        <TextBlock Text="&#xE8F1;" FontFamily="Segoe MDL2 Assets" FontSize="18" Foreground="#6b7280" Margin="0,0,15,0"/>
-                                        <TextBlock Text="Ngân hàng Câu hỏi" FontSize="14" FontWeight="Medium" Foreground="#4b5563"/>
-                                    </StackPanel>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
-
                     <Button Visibility="{Binding StudentMenuVisibility}" Height="45" Background="Transparent" BorderThickness="0" Margin="0,0,0,5" Cursor="Hand">
                         <Button.Template>
                             <ControlTemplate TargetType="Button">
@@ -129,8 +166,9 @@
                         </Button.Template>
                     </Button>
                 </StackPanel>
+
                 <Border Grid.Row="2" BorderBrush="#e1e3e4" BorderThickness="0,1,0,0" Padding="0,15,0,0">
-                    <Button Command="{Binding LogoutCommand}" Height="45" Background="Transparent" BorderThickness="0" Cursor="Hand"  ToolTip="Đăng xuất khỏi hệ thống">
+                    <Button Command="{Binding LogoutCommand}" Height="45" Background="Transparent" BorderThickness="0" Cursor="Hand" ToolTip="Đăng xuất khỏi hệ thống">
                         <Button.Template>
                             <ControlTemplate TargetType="Button">
                                 <Border x:Name="borderBg" CornerRadius="10" Background="{TemplateBinding Background}">
@@ -150,6 +188,8 @@
                 </Border>
             </Grid>
         </Border>
+
+        <!-- Content Area -->
         <ContentControl Grid.Row="1" Grid.Column="1" Content="{Binding CurrentView}" Margin="20"/>
     </Grid>
 </Window>

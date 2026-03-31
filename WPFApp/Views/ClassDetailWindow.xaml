@@ -1,0 +1,164 @@
+﻿<Window x:Class="WPFApp.Views.ClassDetailWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="{Binding ClassInfo.ClassName, StringFormat='Chi tiết lớp: {0}'}" Height="750" Width="1200"
+        WindowStartupLocation="CenterScreen" Background="#f3f4f5" FontFamily="Segoe UI">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header: SatouEdu + Thông tin lớp + Nút tạo bài tập -->
+        <Grid Grid.Row="0" Margin="0,0,0,20">
+            <!-- Cột trái: Logo + Tên trường + Thông tin lớp -->
+            <StackPanel HorizontalAlignment="Left">
+                <!-- SatouEdu -->
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,8" Width="290">
+                    <TextBlock Text="&#xE701;" FontFamily="Segoe MDL2 Assets" FontSize="22" Foreground="#00FFFF" VerticalAlignment="Center" Margin="0,0,8,0"/>
+                    <TextBlock Text="SatouEdu" FontSize="22" FontWeight="Black" Foreground="#00FFFF" Height="29" Width="110"/>
+                </StackPanel>
+
+                <!-- Tên lớp -->
+                <TextBlock Text="{Binding ClassInfo.ClassName}" FontSize="28" FontWeight="Black" Foreground="#191c1d" Margin="0,5,0,0" Height="8" RenderTransformOrigin="0.5,0.5">
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+
+                <!-- Mô tả -->
+                <TextBlock Text="Quản lý bài tập và tiến độ học tập của học sinh." FontSize="14" Foreground="#6b7280" Margin="0,5,0,0"/>
+            </StackPanel>
+
+            <!-- Nút Tạo Bài Tập Mới (bên phải) -->
+            <Button Command="{Binding CreateExamCommand}" HorizontalAlignment="Right" Height="45" Padding="20,0" Background="#00FFFF" BorderThickness="0" Cursor="Hand">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="8" Background="{TemplateBinding Background}">
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <TextBlock Text="&#xE710;" FontFamily="Segoe MDL2 Assets" Foreground="White" FontSize="16" Margin="0,0,8,0" FontWeight="Bold"/>
+                                <TextBlock Text="Tạo Bài Tập Mới" Foreground="White" FontSize="14" FontWeight="Bold"/>
+                            </StackPanel>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Grid>
+
+        <!-- Nội dung chính: Danh sách bài tập + Tiến độ học sinh -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="6*"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Cột trái: Danh sách bài tập -->
+            <Border Grid.Column="0" Background="White" CornerRadius="12" Padding="20">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Text="Danh sách Bài tập / Kiểm tra" FontSize="18" FontWeight="Bold" Margin="0,0,0,15"/>
+
+                    <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                        <ItemsControl ItemsSource="{Binding ExamsList}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Background="#f8f9fa" BorderBrush="#e1e3e4" BorderThickness="1" CornerRadius="8" Padding="15" Margin="0,0,0,10">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <StackPanel Grid.Column="0">
+                                                <TextBlock Text="{Binding ExamName}" FontSize="16" FontWeight="Bold" Foreground="#006683"/>
+                                                <TextBlock Text="{Binding EndDate, StringFormat='Hạn nộp: {0:dd/MM/yyyy HH:mm}'}" FontSize="12" Foreground="#dc2626" Margin="0,5,0,0"/>
+                                            </StackPanel>
+
+                                            <Button Grid.Column="1" Command="{Binding DataContext.ViewExamCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}" CommandParameter="{Binding ExamId}" Height="35" Padding="15,0" Background="#e0f2fe" BorderThickness="0" Cursor="Hand" VerticalAlignment="Center">
+                                                <Button.Template>
+                                                    <ControlTemplate TargetType="Button">
+                                                        <Border CornerRadius="6" Background="{TemplateBinding Background}">
+                                                            <TextBlock Text="Xem chi tiết" Foreground="#0284c7" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                                        </Border>
+                                                    </ControlTemplate>
+                                                </Button.Template>
+                                            </Button>
+                                        </Grid>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </ScrollViewer>
+                </Grid>
+            </Border>
+
+            <!-- Khoảng cách giữa 2 cột -->
+            <GridSplitter Grid.Column="1" Width="4" HorizontalAlignment="Stretch" Background="#e5e7eb" ResizeBehavior="BasedOnAlignment"/>
+
+            <!-- Cột phải: Tiến độ học sinh -->
+            <Border Grid.Column="2" Background="White" CornerRadius="12" Padding="20">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Text="Tiến độ Học sinh" FontSize="18" FontWeight="Bold" Margin="0,0,0,15"/>
+
+                    <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                        <ItemsControl ItemsSource="{Binding StudentsList}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Button Command="{Binding DataContext.ViewStudentProgressCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}" 
+                                            CommandParameter="{Binding StudentId}" 
+                                            Background="Transparent" BorderThickness="0" Cursor="Hand" HorizontalContentAlignment="Stretch">
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="Button">
+                                                <Border x:Name="rowBorder" BorderBrush="#f3f4f5" BorderThickness="0,0,0,1" Background="{TemplateBinding Background}" Padding="10">
+                                                    <Grid>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="*"/>
+                                                            <ColumnDefinition Width="Auto"/>
+                                                            <ColumnDefinition Width="Auto"/>
+                                                        </Grid.ColumnDefinitions>
+
+                                                        <TextBlock Grid.Column="0" Text="{Binding FullName}" FontSize="14" FontWeight="SemiBold" VerticalAlignment="Center"/>
+
+                                                        <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="0,0,15,0" VerticalAlignment="Center" ToolTip="Số bài đã làm">
+                                                            <TextBlock Text="&#xE736;" FontFamily="Segoe MDL2 Assets" Foreground="#6b7280" FontSize="12" Margin="0,0,3,0" VerticalAlignment="Center"/>
+                                                            <TextBlock Text="{Binding TotalExamsDone}" Foreground="#6b7280" FontSize="13" FontWeight="Bold" VerticalAlignment="Center"/>
+                                                        </StackPanel>
+
+                                                        <Border Grid.Column="2" Background="#dcfce7" CornerRadius="6" Padding="10,4" VerticalAlignment="Center" ToolTip="Điểm trung bình">
+                                                            <TextBlock Text="{Binding AverageScore, StringFormat='{}{0:0.0} đ'}" Foreground="#16a34a" FontSize="13" FontWeight="Black"/>
+                                                        </Border>
+                                                    </Grid>
+                                                </Border>
+                                                <ControlTemplate.Triggers>
+                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                        <Setter TargetName="rowBorder" Property="Background" Value="#f0f9ff"/>
+                                                    </Trigger>
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </ScrollViewer>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

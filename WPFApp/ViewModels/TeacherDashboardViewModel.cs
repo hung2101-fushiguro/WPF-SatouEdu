@@ -5,6 +5,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 using WPFApp.Commands;
+using WPFApp.Views;
 
 namespace WPFApp.ViewModels
 {
@@ -42,6 +43,7 @@ namespace WPFApp.ViewModels
         public ICommand ManageEnrollmentCommand { get; }
         public ICommand EditClassCommand { get; }
         public ICommand DeleteClassCommand { get; }
+        public ICommand EnterClassCommand { get; }
 
         public TeacherDashboardViewModel(User teacher)
         {
@@ -52,7 +54,7 @@ namespace WPFApp.ViewModels
             RecentReports = new ObservableCollection<ReportModel>();
             EditClassCommand = new RelayCommand<int>(ExecuteEditClass);
             DeleteClassCommand = new RelayCommand<int>(ExecuteDeleteClass);
-
+            EnterClassCommand = new RelayCommand<int>(ExecuteEnterClass);
             AddClassCommand = new RelayCommand<object>(ExecuteAddClass);
             ManageEnrollmentCommand = new RelayCommand<int>(ExecuteManageEnrollment);
 
@@ -133,5 +135,12 @@ namespace WPFApp.ViewModels
                 }
             }
         }
-}
+        private void ExecuteEnterClass(int classId)
+        {
+            ClassDetailWindow detailWindow = new ClassDetailWindow(classId);
+            detailWindow.ShowDialog();
+            // Refresh lại Dashboard nếu cần
+            LoadRealClasses();
+        }
+    }
 }

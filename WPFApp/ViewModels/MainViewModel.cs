@@ -28,25 +28,39 @@ namespace WPFApp.ViewModels
 
         // Hiện menu cho Giáo viên & Admin
         public Visibility TeacherMenuVisibility =>
-            (_currentUser != null && (_currentUser.Role == 0 || _currentUser.Role == 1))
-            ? Visibility.Visible : Visibility.Collapsed;
+      (_currentUser != null && (_currentUser.Role == 0 || _currentUser.Role == 1))
+      ? Visibility.Visible : Visibility.Collapsed;
 
         // Hiện menu dành riêng cho Học sinh
         public Visibility StudentMenuVisibility =>
-            (_currentUser != null && _currentUser.Role == 2)
-            ? Visibility.Visible : Visibility.Collapsed;
+      (_currentUser != null && _currentUser.Role == 2)
+      ? Visibility.Visible : Visibility.Collapsed;
 
         // -----------------------------------------------------------------------
+
+        // --- THÊM 2 THUỘC TÍNH NÀY ĐỂ KIỂM TRA MÀN HÌNH ĐANG ACTIVE ---
+        public bool IsDashboardActive => _currentView is TeacherDashboardViewModel || _currentView is StudentDashboardViewModel;
+        public bool IsQuestionBankActive => _currentView is QuestionBankViewModel;
 
         private object _currentView;
         public object CurrentView
         {
             get => _currentView;
-            set { _currentView = value; OnPropertyChanged(); }
+            set
+            {
+                _currentView = value;
+                OnPropertyChanged();
+
+                // Báo cho giao diện biết để cập nhật lại màu Menu mỗi khi chuyển trang
+                OnPropertyChanged(nameof(IsDashboardActive));
+                OnPropertyChanged(nameof(IsQuestionBankActive));
+            }
         }
 
         public ICommand LogoutCommand { get; }
         public ICommand ExitCommand { get; }
+        public ICommand NavDashboardCommand { get; }
+        public ICommand NavQuestionBankCommand { get; }
 
         public MainViewModel(User user)
         {
@@ -54,6 +68,16 @@ namespace WPFApp.ViewModels
 
             LogoutCommand = new RelayCommand<object>(ExecuteLogout);
             ExitCommand = new RelayCommand<object>(ExecuteExit);
+
+            NavDashboardCommand = new RelayCommand<object>(_ =>
+            {
+                CurrentView = new TeacherDashboardViewModel(_currentUser);
+            });
+
+            NavQuestionBankCommand = new RelayCommand<object>(_ =>
+            {
+                CurrentView = new QuestionBankViewModel(_currentUser);
+            });
 
             // --- 2. THAY ĐỔI LOGIC NẠP DASHBOARD MẶC ĐỊNH ---
             if (_currentUser.Role == 1) // Nếu là Giáo viên

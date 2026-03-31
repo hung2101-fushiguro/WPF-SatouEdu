@@ -3,64 +3,64 @@
   "WorkspaceRootPath": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\viewmodels\\studentdashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\viewmodels\\studentdashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\views\\studentprogressdetailwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\views\\studentprogressdetailwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\views\\studentdashboardview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\views\\studentdashboardview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\views\\studentprogressdetailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\views\\studentprogressdetailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\views\\editclasswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\views\\editclasswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\viewmodels\\classdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\viewmodels\\classdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\views\\editclasswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\views\\editclasswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\views\\classdetailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\views\\classdetailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\views\\addclasswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\views\\addclasswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\viewmodels\\editclassviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\viewmodels\\editclassviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\views\\examdetailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\views\\examdetailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\views\\teacherdashboardview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\views\\teacherdashboardview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\viewmodels\\teacherdashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\viewmodels\\teacherdashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\views\\studentexamtakingview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\views\\studentexamtakingview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{840822AF-96A5-4EE3-9E79-12972C8A5D46}|DataAccessLayer\\DataAccessLayer.csproj|e:\\satoru\\documents\\prn212\\satouedu\\dataaccesslayer\\classdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{840822AF-96A5-4EE3-9E79-12972C8A5D46}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\classdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\views\\studentclassdetailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\views\\studentclassdetailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\viewmodels\\studentexamresultviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\viewmodels\\studentexamresultviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\views\\studentclassdetailwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\views\\studentclassdetailwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\views\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\views\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\viewmodels\\studentclassdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\viewmodels\\studentclassdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\views\\studentexamresultview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\views\\studentexamresultview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\viewmodels\\studentexamtakingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\viewmodels\\studentexamtakingviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\commands\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\commands\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\viewmodels\\studentdashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\viewmodels\\studentdashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|e:\\satoru\\documents\\prn212\\satouedu\\wpfapp\\viewmodels\\questionbankviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1531523-275F-4F34-A8F1-25799A46E13C}|WPFApp\\WPFApp.csproj|solutionrelative:wpfapp\\viewmodels\\questionbankviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -80,193 +80,198 @@
         },
         {
           "DockedWidth": 1186,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StudentProgressDetailWindow.xaml.cs",
+              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Views\\StudentProgressDetailWindow.xaml.cs",
+              "RelativeDocumentMoniker": "WPFApp\\Views\\StudentProgressDetailWindow.xaml.cs",
+              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Views\\StudentProgressDetailWindow.xaml.cs",
+              "RelativeToolTip": "WPFApp\\Views\\StudentProgressDetailWindow.xaml.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAowCIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T09:49:33.619Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "StudentDashboardView.xaml",
-              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Views\\StudentDashboardView.xaml",
-              "RelativeDocumentMoniker": "WPFApp\\Views\\StudentDashboardView.xaml",
-              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Views\\StudentDashboardView.xaml",
-              "RelativeToolTip": "WPFApp\\Views\\StudentDashboardView.xaml",
+              "Title": "StudentProgressDetailWindow.xaml",
+              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Views\\StudentProgressDetailWindow.xaml",
+              "RelativeDocumentMoniker": "WPFApp\\Views\\StudentProgressDetailWindow.xaml",
+              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Views\\StudentProgressDetailWindow.xaml",
+              "RelativeToolTip": "WPFApp\\Views\\StudentProgressDetailWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-30T20:24:28.682Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EditClassWindow.xaml.cs",
-              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Views\\EditClassWindow.xaml.cs",
-              "RelativeDocumentMoniker": "WPFApp\\Views\\EditClassWindow.xaml.cs",
-              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Views\\EditClassWindow.xaml.cs",
-              "RelativeToolTip": "WPFApp\\Views\\EditClassWindow.xaml.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAADwvx0AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T20:15:21.439Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AddClassWindow.xaml",
-              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Views\\AddClassWindow.xaml",
-              "RelativeDocumentMoniker": "WPFApp\\Views\\AddClassWindow.xaml",
-              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Views\\AddClassWindow.xaml",
-              "RelativeToolTip": "WPFApp\\Views\\AddClassWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-30T20:15:15.527Z",
+              "WhenOpened": "2026-03-31T09:49:01.649Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "EditClassWindow.xaml",
-              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Views\\EditClassWindow.xaml",
-              "RelativeDocumentMoniker": "WPFApp\\Views\\EditClassWindow.xaml",
-              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Views\\EditClassWindow.xaml",
-              "RelativeToolTip": "WPFApp\\Views\\EditClassWindow.xaml",
+              "Title": "ClassDetailWindow.xaml",
+              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Views\\ClassDetailWindow.xaml",
+              "RelativeDocumentMoniker": "WPFApp\\Views\\ClassDetailWindow.xaml",
+              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Views\\ClassDetailWindow.xaml",
+              "RelativeToolTip": "WPFApp\\Views\\ClassDetailWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-30T20:15:07.794Z",
+              "WhenOpened": "2026-03-31T09:45:09.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ExamDetailWindow.xaml",
+              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Views\\ExamDetailWindow.xaml",
+              "RelativeDocumentMoniker": "WPFApp\\Views\\ExamDetailWindow.xaml",
+              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Views\\ExamDetailWindow.xaml",
+              "RelativeToolTip": "WPFApp\\Views\\ExamDetailWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-31T09:39:57.289Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "EditClassViewModel.cs",
-              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\ViewModels\\EditClassViewModel.cs",
-              "RelativeDocumentMoniker": "WPFApp\\ViewModels\\EditClassViewModel.cs",
-              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\ViewModels\\EditClassViewModel.cs",
-              "RelativeToolTip": "WPFApp\\ViewModels\\EditClassViewModel.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAuwE8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T20:13:50.263Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "TeacherDashboardView.xaml",
               "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Views\\TeacherDashboardView.xaml",
               "RelativeDocumentMoniker": "WPFApp\\Views\\TeacherDashboardView.xaml",
               "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Views\\TeacherDashboardView.xaml",
               "RelativeToolTip": "WPFApp\\Views\\TeacherDashboardView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-30T20:11:46.013Z",
+              "WhenOpened": "2026-03-31T09:38:39.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "StudentExamResultView.xaml",
+              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Views\\StudentExamResultView.xaml",
+              "RelativeDocumentMoniker": "WPFApp\\Views\\StudentExamResultView.xaml",
+              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Views\\StudentExamResultView.xaml",
+              "RelativeToolTip": "WPFApp\\Views\\StudentExamResultView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-31T09:13:57.007Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "ClassDAO.cs",
-              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\DataAccessLayer\\ClassDAO.cs",
-              "RelativeDocumentMoniker": "DataAccessLayer\\ClassDAO.cs",
-              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\DataAccessLayer\\ClassDAO.cs",
-              "RelativeToolTip": "DataAccessLayer\\ClassDAO.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAYwCgAAAAvAAAAAAAAAA==",
+              "Title": "StudentExamResultViewModel.cs",
+              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\ViewModels\\StudentExamResultViewModel.cs",
+              "RelativeDocumentMoniker": "WPFApp\\ViewModels\\StudentExamResultViewModel.cs",
+              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\ViewModels\\StudentExamResultViewModel.cs",
+              "RelativeToolTip": "WPFApp\\ViewModels\\StudentExamResultViewModel.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAvwEwAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T20:05:57.212Z",
+              "WhenOpened": "2026-03-31T09:13:16.742Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TeacherDashboardViewModel.cs",
-              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\ViewModels\\TeacherDashboardViewModel.cs",
-              "RelativeDocumentMoniker": "WPFApp\\ViewModels\\TeacherDashboardViewModel.cs",
-              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\ViewModels\\TeacherDashboardViewModel.cs",
-              "RelativeToolTip": "WPFApp\\ViewModels\\TeacherDashboardViewModel.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAwwIgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T19:45:35.892Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "StudentDashboardViewModel.cs",
-              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\ViewModels\\StudentDashboardViewModel.cs",
-              "RelativeDocumentMoniker": "WPFApp\\ViewModels\\StudentDashboardViewModel.cs",
-              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\ViewModels\\StudentDashboardViewModel.cs",
-              "RelativeToolTip": "WPFApp\\ViewModels\\StudentDashboardViewModel.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAEAAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T19:37:46.938Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "App.xaml",
-              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\App.xaml",
-              "RelativeDocumentMoniker": "WPFApp\\App.xaml",
-              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\App.xaml",
-              "RelativeToolTip": "WPFApp\\App.xaml",
+              "DocumentIndex": 6,
+              "Title": "StudentExamTakingView.xaml",
+              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Views\\StudentExamTakingView.xaml",
+              "RelativeDocumentMoniker": "WPFApp\\Views\\StudentExamTakingView.xaml",
+              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Views\\StudentExamTakingView.xaml",
+              "RelativeToolTip": "WPFApp\\Views\\StudentExamTakingView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-30T17:58:16.671Z",
+              "WhenOpened": "2026-03-31T08:52:29.954Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "RegisterViewModel.cs",
-              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\ViewModels\\RegisterViewModel.cs",
-              "RelativeDocumentMoniker": "WPFApp\\ViewModels\\RegisterViewModel.cs",
-              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\ViewModels\\RegisterViewModel.cs",
-              "RelativeToolTip": "WPFApp\\ViewModels\\RegisterViewModel.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAQwEUAAAAYAAAAAAAAAA==",
+              "Title": "StudentExamTakingViewModel.cs",
+              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\ViewModels\\StudentExamTakingViewModel.cs",
+              "RelativeDocumentMoniker": "WPFApp\\ViewModels\\StudentExamTakingViewModel.cs",
+              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\ViewModels\\StudentExamTakingViewModel.cs",
+              "RelativeToolTip": "WPFApp\\ViewModels\\StudentExamTakingViewModel.cs",
+              "ViewState": "AgIAAIwAAAAAAAAAAAAAwJgAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T17:16:23.924Z",
+              "WhenOpened": "2026-03-31T08:50:49.564Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Views\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "WPFApp\\Views\\MainWindow.xaml",
-              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Views\\MainWindow.xaml",
-              "RelativeToolTip": "WPFApp\\Views\\MainWindow.xaml",
+              "Title": "StudentClassDetailWindow.xaml.cs",
+              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Views\\StudentClassDetailWindow.xaml.cs",
+              "RelativeDocumentMoniker": "WPFApp\\Views\\StudentClassDetailWindow.xaml.cs",
+              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Views\\StudentClassDetailWindow.xaml.cs",
+              "RelativeToolTip": "WPFApp\\Views\\StudentClassDetailWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T08:44:22.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "StudentClassDetailWindow.xaml",
+              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Views\\StudentClassDetailWindow.xaml",
+              "RelativeDocumentMoniker": "WPFApp\\Views\\StudentClassDetailWindow.xaml",
+              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Views\\StudentClassDetailWindow.xaml",
+              "RelativeToolTip": "WPFApp\\Views\\StudentClassDetailWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-30T15:41:47.677Z",
+              "WhenOpened": "2026-03-31T08:43:41.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "StudentClassDetailViewModel.cs",
+              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\ViewModels\\StudentClassDetailViewModel.cs",
+              "RelativeDocumentMoniker": "WPFApp\\ViewModels\\StudentClassDetailViewModel.cs",
+              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\ViewModels\\StudentClassDetailViewModel.cs",
+              "RelativeToolTip": "WPFApp\\ViewModels\\StudentClassDetailViewModel.cs",
+              "ViewState": "AgIAAJYAAAAAAAAAAADwv40AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T08:42:45.529Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "ViewModelBase.cs",
-              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\ViewModels\\ViewModelBase.cs",
-              "RelativeDocumentMoniker": "WPFApp\\ViewModels\\ViewModelBase.cs",
-              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\ViewModels\\ViewModelBase.cs",
-              "RelativeToolTip": "WPFApp\\ViewModels\\ViewModelBase.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAABWAAAAAAAAAA==",
+              "Title": "StudentDashboardViewModel.cs",
+              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\ViewModels\\StudentDashboardViewModel.cs",
+              "RelativeDocumentMoniker": "WPFApp\\ViewModels\\StudentDashboardViewModel.cs",
+              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\ViewModels\\StudentDashboardViewModel.cs",
+              "RelativeToolTip": "WPFApp\\ViewModels\\StudentDashboardViewModel.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAqwAgAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T08:09:23.622Z",
+              "WhenOpened": "2026-03-31T08:40:34.509Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "RelayCommand.cs",
-              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Commands\\RelayCommand.cs",
-              "RelativeDocumentMoniker": "WPFApp\\Commands\\RelayCommand.cs",
-              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Commands\\RelayCommand.cs",
-              "RelativeToolTip": "WPFApp\\Commands\\RelayCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABIAAAAAAAAAA==",
+              "Title": "QuestionBankViewModel.cs",
+              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\ViewModels\\QuestionBankViewModel.cs",
+              "RelativeDocumentMoniker": "WPFApp\\ViewModels\\QuestionBankViewModel.cs",
+              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\ViewModels\\QuestionBankViewModel.cs",
+              "RelativeToolTip": "WPFApp\\ViewModels\\QuestionBankViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHoAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T07:47:29.74Z"
+              "WhenOpened": "2026-03-31T07:44:39.224Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "LoginWindow.xaml",
-              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Views\\LoginWindow.xaml",
-              "RelativeDocumentMoniker": "WPFApp\\Views\\LoginWindow.xaml",
-              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\Views\\LoginWindow.xaml",
-              "RelativeToolTip": "WPFApp\\Views\\LoginWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-30T07:27:14.227Z",
+              "DocumentIndex": 2,
+              "Title": "ClassDetailViewModel.cs",
+              "DocumentMoniker": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\ViewModels\\ClassDetailViewModel.cs",
+              "RelativeDocumentMoniker": "WPFApp\\ViewModels\\ClassDetailViewModel.cs",
+              "ToolTip": "E:\\Satoru\\Documents\\PRN212\\SatouEdu\\WPFApp\\ViewModels\\ClassDetailViewModel.cs",
+              "RelativeToolTip": "WPFApp\\ViewModels\\ClassDetailViewModel.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAmwGoAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T06:07:13.433Z",
               "EditorCaption": ""
             }
           ]

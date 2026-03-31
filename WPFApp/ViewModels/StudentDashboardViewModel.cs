@@ -6,6 +6,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 using WPFApp.Commands;
+using WPFApp.Views;
 
 namespace WPFApp.ViewModels
 {
@@ -121,7 +122,9 @@ namespace WPFApp.ViewModels
                 // Xử lý hành động dựa trên trạng thái nút bấm hiện tại
                 if (targetClass.EnrollmentStatus == 2)
                 {
-                    MessageBox.Show("Mở màn hình chi tiết lớp học (Bài giảng, Bài tập...) ở các bước sau!", "Vào lớp", MessageBoxButton.OK, MessageBoxImage.Information);
+                    // XÓA MessageBox cũ đi và thêm 2 dòng này:
+                    StudentClassDetailWindow detailWindow = new StudentClassDetailWindow(classId, _currentStudent);
+                    detailWindow.ShowDialog();
                     return;
                 }
                 else if (targetClass.EnrollmentStatus == 1)
